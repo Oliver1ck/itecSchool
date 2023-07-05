@@ -1,0 +1,30 @@
+.docs__title{
+  margin-bottom: 15px;
+}
+
+.docs__content{
+  display: flex;
+  gap: 30px;
+}
+
+.docs {
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid var(--border-color-main);
+  background: rgb(233, 208, 24);
+  flex: 1 1 auto;
+  max-width: 790px;
+  word-break: break-word;
+}
+
+.more__docs{
+  flex: 0 1 300px;
+  border-radius: 10px;
+  border: 2px solid var(--border-color-main);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 300px;
+  overflow: auto;
+}

@@ -4,5 +4,26 @@
   margin: 0 auto;
 }
 
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
 @import "_variables.scss";
 @import "_header.scss";
+@import "_mainNav.scss";
+@import "_aside.scss";
+@import "_content.scss";
+@import "_videoBlock.scss";
+@import "_docs.scss";

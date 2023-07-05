@@ -1,0 +1,29 @@
+.main__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.list__item {
+  & a {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    background: var(--mainBtnBg);
+    color: var(--secondColor);
+    font-size: var(--fzText);
+  }
+}
+
+.listAtive{
+  & a {
+    background: red;
+    color: var(--mainBtnColor);
+  }
+}
