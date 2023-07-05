@@ -14,6 +14,7 @@
   padding: 40px;
   border-radius: 15px;
   height: 340px;
+  min-width: 300px;
 }
 
 .more__video-block {
@@ -41,4 +42,20 @@
   padding: 40px;
   border-radius: 15px;
   border: 1px solid var(--border-color-main);
+}
+
+@media (max-width:1200px){
+  .video__block{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:768px) {
+  .video__item{
+    max-width: 350px;
+    height: 130px;
+  }
+  .more__video-block{
+    flex: 1 1 auto;
+  }
 }

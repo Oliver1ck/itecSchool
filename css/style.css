@@ -1,3 +1,7 @@
+.wrapper {
+  padding-bottom: 20px;
+}
+
 .container {
   max-width: 1460px;
   padding: 0 20px;
@@ -8,6 +12,7 @@
   width: 4px;
   background-color: white;
   border-radius: 10px;
+  border: 1px solid var(--border-color-main);
 }
 
 ::-webkit-scrollbar-track {
@@ -42,6 +47,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding-top: 15px;
+  gap: 15px;
 }
 
 .header__logo {
@@ -106,6 +112,15 @@ header {
   font-size: var(--fzText);
 }
 
+@media (max-width: 768px) {
+  .header__wrapper {
+    flex-wrap: wrap;
+  }
+  .header__search {
+    order: 3;
+    flex: 1 1 768px;
+  }
+}
 .main__nav {
   display: flex;
   justify-content: center;
@@ -132,12 +147,23 @@ header {
   color: var(--mainBtnColor);
 }
 
+@media (max-width: 768px) {
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .aside {
   flex: 0 1 250px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: sticky;
+  top: 0px;
+  height: 100vh;
+  padding: 10px;
+  background: black;
 }
 
 .aside__item {
@@ -174,8 +200,18 @@ header {
 }
 .aside__list-item a p {
   font-size: var(--fzText);
+  color: var(--mainColor);
 }
 
+@media (max-width: 1200px) {
+  .aside {
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    width: 250px;
+    min-height: 100vh;
+  }
+}
 .main__content {
   display: flex;
 }
@@ -185,6 +221,11 @@ header {
   padding-left: 50px;
 }
 
+@media (max-width: 1200px) {
+  .content {
+    padding: 0;
+  }
+}
 .video__block {
   display: flex;
   align-items: flex-start;
@@ -201,6 +242,7 @@ header {
   padding: 40px;
   border-radius: 15px;
   height: 340px;
+  min-width: 300px;
 }
 
 .more__video-block {
@@ -230,6 +272,20 @@ header {
   border: 1px solid var(--border-color-main);
 }
 
+@media (max-width: 1200px) {
+  .video__block {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .video__item {
+    max-width: 350px;
+    height: 130px;
+  }
+  .more__video-block {
+    flex: 1 1 auto;
+  }
+}
 .docs__title {
   margin-bottom: 15px;
 }
@@ -250,7 +306,7 @@ header {
 }
 
 .more__docs {
-  flex: 0 1 300px;
+  flex: 0 0 300px;
   border-radius: 10px;
   border: 2px solid var(--border-color-main);
   padding: 15px;
@@ -259,4 +315,11 @@ header {
   gap: 15px;
   max-height: 300px;
   overflow: auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .docs__content {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

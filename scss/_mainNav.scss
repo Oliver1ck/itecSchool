@@ -27,3 +27,10 @@
     color: var(--mainBtnColor);
   }
 }
+
+@media (max-width:768px) {
+  .nav__list{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

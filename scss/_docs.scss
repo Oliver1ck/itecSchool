@@ -18,7 +18,7 @@
 }
 
 .more__docs{
-  flex: 0 1 300px;
+  flex: 0 0 300px;
   border-radius: 10px;
   border: 2px solid var(--border-color-main);
   padding: 15px;
@@ -27,4 +27,11 @@
   gap: 15px;
   max-height: 300px;
   overflow: auto;
+  width: 100%;
+}
+
+@media (max-width:768px) {
+  .docs__content{
+    flex-direction: column;
+  }
 }

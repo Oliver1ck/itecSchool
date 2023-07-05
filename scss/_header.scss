@@ -8,6 +8,7 @@ header{
   align-items: center;
   justify-content: space-between;
   padding-top: 15px;
+  gap: 15px;
 }
 
 .header__logo {
@@ -71,4 +72,14 @@ header{
 .logout__text{
   color: var(--secondColor);
   font-size: var(--fzText);
+}
+
+@media (max-width:768px) {
+  .header__wrapper{
+    flex-wrap: wrap;
+  }
+  .header__search{
+    order: 3;
+    flex: 1 1 768px;
+  }
 }
