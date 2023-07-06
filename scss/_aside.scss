@@ -9,6 +9,7 @@
   height: 100vh;
   padding: 10px;
   background: black;
+  transition: ease 1s;
 }
 
 .aside__item {
@@ -80,5 +81,7 @@
 
 
 .aside__active{
+  padding-top: 60px;
   left: 0;
+  transition: ease-out 1s;
 }

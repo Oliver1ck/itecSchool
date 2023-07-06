@@ -18,6 +18,10 @@
     background: var(--mainBtnBg);
     color: var(--secondColor);
     font-size: var(--fzText);
+
+    &:hover{
+      background: #7e0404;
+    }
   }
 }
 
@@ -28,9 +32,26 @@
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:992px) {
   .nav__list{
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow: auto;
+    gap: 5px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .list__item{
+    &:nth-child(5){
+      flex: 0 0 180px;
+    }
+
+    &:nth-child(6){
+      flex: 0 0 255px;
+    }
+
+    &:nth-child(7){
+      flex: 0 0 193px;
+    }
   }
 }
