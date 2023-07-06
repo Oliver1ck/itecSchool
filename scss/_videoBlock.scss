@@ -52,10 +52,23 @@
 
 @media (max-width:768px) {
   .video__item{
-    max-width: 350px;
+    max-width: none;
     height: 130px;
+  }
+
+  .video__block{
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .more__video-item{
+    flex-direction: column;
   }
   .more__video-block{
     flex: 1 1 auto;
+  }
+
+  .more__video-item{
+    flex-direction: column;
   }
 }

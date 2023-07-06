@@ -51,13 +51,34 @@
   }
 }
 
+.aside__btn{
+  padding: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+}
+
 
 @media (max-width:1200px) {
   .aside{
     position: fixed;
     top: 0;
-    left: -1000px;
+    left: -250px;
     width: 250px;
     min-height: 100vh;
   }
+}
+
+
+.aside__active{
+  left: 0;
 }
