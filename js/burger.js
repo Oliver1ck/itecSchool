@@ -1,13 +1,28 @@
-const burger = document.querySelector('.header__burger');
-const aside = document.querySelector('.aside');
+const burger = document.querySelector(".header__burger");
+const aside = document.querySelector(".aside");
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('burgerActive');
-  aside.classList.toggle('aside__active');
-
-  if(burger.classList.contains('burgerActive')){
-    document.body.style.overflow = 'hidden';
-  }else{
-    document.body.style.overflow = 'auto';
+if (window.innerWidth > 1200) {
+  if (!aside.classList.contains("aside__activeTwo")) {
+    burger.classList.add("burgerActive");
   }
-})
+
+  burger.addEventListener("click", () => {
+    aside.classList.toggle("aside__activeTwo");
+    if (aside.classList.contains("aside__activeTwo")) {
+      burger.classList.remove("burgerActive");
+    } else {
+      burger.classList.add("burgerActive");
+    }
+  });
+} else {
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("burgerActive");
+    aside.classList.toggle("aside__active");
+
+    if (burger.classList.contains("burgerActive")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  });
+}

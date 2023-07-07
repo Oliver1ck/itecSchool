@@ -64,13 +64,14 @@ header {
   display: flex;
   align-items: center;
   z-index: 3;
+  cursor: pointer;
 }
 .header__burger span {
   display: block;
   width: 100%;
   height: 2px;
   background: gray;
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 .header__burger::after {
   position: absolute;
@@ -81,7 +82,7 @@ header {
   top: 0;
   left: 0;
   background: gray;
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 .header__burger::before {
   position: absolute;
@@ -92,22 +93,22 @@ header {
   bottom: 0;
   left: 0;
   background: gray;
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 
 .burgerActive span {
   opacity: 0;
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 .burgerActive::after {
   top: 9px;
   transform: rotate(45deg);
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 .burgerActive::before {
   bottom: 9px;
   transform: rotate(-45deg);
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 
 .logo__img {
@@ -190,6 +191,7 @@ header {
   display: flex;
   gap: 15px;
   align-items: center;
+  overflow: auto;
 }
 
 .list__item a {
@@ -228,7 +230,7 @@ header {
   }
 }
 .aside {
-  flex: 0 1 250px;
+  flex: 0 0 250px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -306,7 +308,20 @@ header {
 }
 .aside__active {
   padding-top: 60px;
+  position: fixed;
+  top: 0;
+  width: 250px;
+  min-height: 100vh;
   left: 0;
+  transition: ease-out 1s;
+}
+
+.aside__activeTwo {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  min-height: 100vh;
   transition: ease-out 1s;
 }
 
@@ -409,7 +424,6 @@ header {
   border: 1px solid var(--border-color-main);
   background: rgb(233, 208, 24);
   flex: 1 1 auto;
-  max-width: 790px;
   word-break: break-word;
 }
 

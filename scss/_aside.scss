@@ -1,5 +1,5 @@
 .aside {
-  flex: 0 1 250px;
+  flex: 0 0 250px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -82,6 +82,20 @@
 
 .aside__active{
   padding-top: 60px;
+  position: fixed;
+  top: 0;
+  width: 250px;
+  min-height: 100vh;
   left: 0;
+  transition: ease-out 1s;
+}
+
+
+.aside__activeTwo{
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  min-height: 100vh;
   transition: ease-out 1s;
 }
