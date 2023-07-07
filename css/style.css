@@ -1,9 +1,13 @@
+body {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
 .wrapper {
   padding-bottom: 20px;
 }
 
 .container {
-  max-width: 1460px;
+  max-width: 1920px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -27,15 +31,15 @@
 .wrapper {
   --border-color-main: gray;
   --border-color-second: rgb(69, 69, 239);
-  --fzTitle: 24px;
-  --fzText: 18px;
+  --fzTitle: 18px;
+  --fzText: 16px;
   --mainColor: white;
-  --secondColor: black;
-  --mainBtnBg: gray;
+  --secondColor: #bbabab;
+  --mainBtnBg: #262525;
   --secondBtnBg: white;
   --mainBtnColor: white;
   --secondBtnColor: black;
-  --asideTitleColor: rgb(190, 103, 40);
+  --asideTitleColor: #d4a910;
 }
 
 header {
@@ -183,7 +187,7 @@ header {
 }
 .main__nav {
   display: flex;
-  justify-content: center;
+  padding-left: 300px;
   margin-bottom: 15px;
 }
 
@@ -231,7 +235,7 @@ header {
 }
 .aside {
   flex: 0 0 250px;
-  overflow-y: auto;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -259,12 +263,12 @@ header {
 .aside__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
 }
 
 .aside__list-item a {
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 .aside__list-item a img {
@@ -272,12 +276,13 @@ header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 40px;
-  max-height: 40px;
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
 }
 .aside__list-item a p {
   font-size: var(--fzText);
-  color: var(--mainColor);
+  color: var(--secondColor);
 }
 
 .aside__btn {
@@ -350,12 +355,14 @@ header {
   flex: 1 1 auto;
 }
 
-.video {
-  border: 1px solid var(--border-color-main);
-  padding: 40px;
+.video video {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid var(--border-color-main);
   border-radius: 15px;
-  height: 340px;
+  height: 465px;
   min-width: 300px;
+  box-shadow: 0px -5px 10px 0px rgba(154, 148, 148, 0.5);
 }
 
 .more__video-block {
@@ -425,6 +432,7 @@ header {
   background: rgb(233, 208, 24);
   flex: 1 1 auto;
   word-break: break-word;
+  color: black;
 }
 
 .more__docs {
