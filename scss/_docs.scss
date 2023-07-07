@@ -20,7 +20,7 @@
 .more__docs{
   flex: 0 0 300px;
   border-radius: 10px;
-  border: 2px solid var(--border-color-main);
+  border: 0.3px solid var(--border-color-main);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,8 @@
   max-height: 300px;
   overflow: auto;
   width: 100%;
+  box-shadow: 0px -5px 10px 0px rgba(154, 148, 148, 0.5)
+
 }
 
 @media (max-width:768px) {
