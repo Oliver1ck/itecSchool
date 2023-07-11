@@ -231,20 +231,11 @@ header {
 }
 @media (max-width: 992px) {
   .nav__list {
-    overflow: auto;
     gap: 5px;
+    flex-wrap: wrap;
   }
   .nav__list::-webkit-scrollbar {
     display: none;
-  }
-  .list__item:nth-child(5) {
-    flex: 0 0 193px;
-  }
-  .list__item:nth-child(6) {
-    flex: 0 0 282px;
-  }
-  .list__item:nth-child(7) {
-    flex: 0 0 197px;
   }
 }
 .aside {
@@ -382,7 +373,7 @@ header {
 }
 
 .more__video-block {
-  flex: 0 1 350px;
+  flex: 0 0 350px;
   border: 0.1px solid var(--border-color-main);
   border-radius: 5px;
   padding: 10px;

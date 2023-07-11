@@ -42,24 +42,24 @@
 
 @media (max-width:992px) {
   .nav__list{
-    overflow: auto;
     gap: 5px;
+    flex-wrap: wrap;
     &::-webkit-scrollbar {
       display: none;
     }
   }
 
   .list__item{
-    &:nth-child(5){
-      flex: 0 0 193px;
-    }
+    // &:nth-child(5){
+    //   flex: 0 0 193px;
+    // }
 
-    &:nth-child(6){
-      flex: 0 0 282px;
-    }
+    // &:nth-child(6){
+    //   flex: 0 0 282px;
+    // }
 
-    &:nth-child(7){
-      flex: 0 0 197px;
-    }
+    // &:nth-child(7){
+    //   flex: 0 0 197px;
+    // }
   }
 }
