@@ -334,7 +334,7 @@ header {
   width: 250px;
   min-height: 100vh;
   left: 0;
-  transition: ease-out 1s;
+  transition: ease-out 0.3s;
   z-index: 2;
 }
 
@@ -344,7 +344,7 @@ header {
   left: -250px;
   width: 250px;
   min-height: 100vh;
-  transition: ease-out 1s;
+  transition: ease-out 0.3s;
 }
 
 .main__content {
