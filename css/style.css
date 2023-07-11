@@ -258,7 +258,7 @@ header {
   height: 100vh;
   padding: 10px;
   background: black;
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 
 .aside__item {
@@ -334,7 +334,7 @@ header {
   width: 250px;
   min-height: 100vh;
   left: 0;
-  transition: ease-out 0.3s;
+  transition: ease-out 0.5s;
   z-index: 2;
 }
 
@@ -344,7 +344,7 @@ header {
   left: -250px;
   width: 250px;
   min-height: 100vh;
-  transition: ease-out 0.3s;
+  transition: ease-out 0.5s;
 }
 
 .main__content {
