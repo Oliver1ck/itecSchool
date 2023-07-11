@@ -448,6 +448,8 @@ header {
 }
 .docs__title {
   margin-bottom: 15px;
+  background: #413d3d;
+  padding: 10px;
 }
 
 .docs__content {

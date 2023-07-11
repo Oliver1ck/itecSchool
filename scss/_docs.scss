@@ -1,8 +1,10 @@
-.docs__title{
+.docs__title {
   margin-bottom: 15px;
+  background: #413d3d;
+  padding: 10px;
 }
 
-.docs__content{
+.docs__content {
   display: flex;
   gap: 30px;
 }
@@ -17,7 +19,7 @@
   color: black;
 }
 
-.more__docs{
+.more__docs {
   flex: 0 0 350px;
   border-radius: 10px;
   border: 0.3px solid var(--border-color-main);
@@ -28,12 +30,11 @@
   max-height: 300px;
   overflow: auto;
   width: 100%;
-  box-shadow: 0px -5px 10px 0px rgba(154, 148, 148, 0.5)
-
+  box-shadow: 0px -5px 10px 0px rgba(154, 148, 148, 0.5);
 }
 
-@media (max-width:768px) {
-  .docs__content{
+@media (max-width: 768px) {
+  .docs__content {
     flex-direction: column;
   }
 }
