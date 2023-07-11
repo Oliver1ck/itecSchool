@@ -15,6 +15,14 @@ if (window.innerWidth > 1200) {
     }
   });
 } else {
+
+  aside.addEventListener("scroll", () => {
+    if(aside.scrollTop > 0) {
+      burger.style.opacity = "0";
+    }else{
+      burger.style.opacity = "1";
+    }
+  })
   burger.addEventListener("click", () => {
     burger.classList.toggle("burgerActive");
     aside.classList.toggle("aside__active");

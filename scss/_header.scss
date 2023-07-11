@@ -124,7 +124,8 @@ header{
     border-radius: 0 10px 10px 0;
     border: 1px solid var(--border-color-main);
     font-size: var(--fzText);
-    color: var(--secondColor);
+    color: var(--mainColor);
+    background: rgb(34, 32, 32);
   }
 }
 
@@ -135,11 +136,11 @@ header{
   border-radius: 10px;
   border: 1px solid var(--border-color-second);
   padding: 5px;
-  background: var(--secondBtnBg);
+  background: none;
 }
 
 .logout__text{
-  color: var(--secondColor);
+  color: var(--mainBtnColor);
   font-size: var(--fzText);
 }
 

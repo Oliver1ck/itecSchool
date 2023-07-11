@@ -1,6 +1,7 @@
 .main__nav {
   display: flex;
   margin-bottom: 15px;
+  padding-left: 300px;
 }
 
 .nav__list {
@@ -30,6 +31,12 @@
   & a {
     background: red;
     color: var(--mainBtnColor);
+  }
+}
+
+@media (max-width:1200px){
+  .main__nav{
+    padding: 0;
   }
 }
 
