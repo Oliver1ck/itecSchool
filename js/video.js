@@ -18,7 +18,7 @@ function videoResize() {
   console.log(videoWidth,videoHeight);
   video.style.width = `${videoWidth}px`
   video.style.height = `${videoHeight}px`
-  moreVideoBlock.style.maxHeight = `${videoHeight - 36}px`
+  moreVideoBlock.style.maxHeight = `${window.innerWidth < 576 ? videoHeight + 100 : videoHeight - 36}px`
 }
 
 
