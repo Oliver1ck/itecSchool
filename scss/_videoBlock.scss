@@ -13,7 +13,6 @@
   & video {
     width: 100%;
     border-radius: 15px;
-    min-width: 300px;
     box-shadow: 0px -5px 10px 0px rgba(154, 148, 148, 0.5)
   }
 }
@@ -99,6 +98,10 @@
   }
   .video__text{
     max-width: 218px;
+  }
+
+  .more__video-wrap{
+    flex: 0 0 auto;
   }
 }
 
