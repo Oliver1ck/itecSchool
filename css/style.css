@@ -196,6 +196,7 @@ header {
 }
 .main__nav {
   display: flex;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -355,10 +356,6 @@ header {
   align-items: stretch;
   gap: 30px;
   margin-bottom: 30px;
-}
-
-.video__wrap {
-  flex: 1 1 auto;
 }
 
 .video video {

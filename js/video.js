@@ -7,7 +7,8 @@ function videoResize() {
   console.log(window.innerWidth);
   console.log(window.innerWidth - 40 - 350 - 30);
   if(window.innerWidth > 1920) return
-  let videoWidth = window.innerWidth - 40 - 350 - 30
+  // let videoWidth = window.innerWidth - 40 - 350 - 30
+  let videoWidth = window.innerWidth - 40 - 450 - 30
   if(window.innerWidth <= 1200){
     videoWidth = window.innerWidth - 24
   }
@@ -18,7 +19,7 @@ function videoResize() {
   console.log(videoWidth,videoHeight);
   video.style.width = `${videoWidth}px`
   video.style.height = `${videoHeight}px`
-  moreVideoBlock.style.maxHeight = `${window.innerWidth < 576 ? videoHeight + 100 : videoHeight - 36}px`
+  moreVideoBlock.style.maxHeight = `${window.innerWidth < 576 ? videoHeight  : videoHeight - 36}px`
 }
 
 
