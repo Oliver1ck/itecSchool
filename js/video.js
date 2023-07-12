@@ -13,7 +13,7 @@ function videoResize() {
   }
   let videoHeight = videoWidth / 2
   if(window.innerWidth <= 576){
-    videoHeight = videoWidth - 150
+    videoHeight = videoWidth - 100
   }
   console.log(videoWidth,videoHeight);
   video.style.width = `${videoWidth}px`
