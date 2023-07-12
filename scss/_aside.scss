@@ -1,20 +1,41 @@
 .aside {
-  flex: 0 0 250px;
   overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: sticky;
-  top: 0px;
   height: 100vh;
   padding: 10px;
   background: black;
   transition: ease 0.5s;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  padding-top: 60px;
+  z-index: 2;
+}
+
+.aside__wrapper{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -1000000px;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.asideActive{
+  left: 0;
+  transition: 0.3s;
+
 }
 
 .aside__item {
   padding-bottom: 20px;
-  border-bottom: 0.1px solid gray;
+  border-bottom: 0.1px solid #434242;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -92,14 +113,4 @@
   left: 0;
   transition: ease-out 0.5s;
   z-index: 2;
-}
-
-
-.aside__activeTwo{
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  min-height: 100vh;
-  transition: ease-out 0.5s;
 }

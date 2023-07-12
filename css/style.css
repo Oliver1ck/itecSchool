@@ -10,9 +10,10 @@ body {
   max-width: 1920px;
   padding: 0 20px;
   margin: 0 auto;
+  position: relative;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .container {
     padding: 0 12px;
   }
@@ -138,7 +139,7 @@ header {
 }
 
 .header__search {
-  flex: 0 1 350px;
+  flex: 0 1 450px;
   display: flex;
   align-items: center;
 }
@@ -172,7 +173,7 @@ header {
 .header__logout {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   border-radius: 10px;
   border: 1px solid var(--border-color-second);
   padding: 5px;
@@ -196,14 +197,14 @@ header {
 .main__nav {
   display: flex;
   margin-bottom: 30px;
-  padding-left: 300px;
 }
 
 .nav__list {
   display: flex;
-  gap: 15px;
+  gap: 5px;
   align-items: center;
   overflow: auto;
+  flex-wrap: wrap;
 }
 
 .list__item a {
@@ -232,7 +233,6 @@ header {
 }
 @media (max-width: 992px) {
   .nav__list {
-    gap: 5px;
     flex-wrap: wrap;
   }
   .nav__list::-webkit-scrollbar {
@@ -240,22 +240,42 @@ header {
   }
 }
 .aside {
-  flex: 0 0 250px;
   overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: sticky;
-  top: 0px;
   height: 100vh;
   padding: 10px;
   background: black;
   transition: ease 0.5s;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  padding-top: 60px;
+  z-index: 2;
+}
+
+.aside__wrapper {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -1000000px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.asideActive {
+  left: 0;
+  transition: 0.3s;
 }
 
 .aside__item {
   padding-bottom: 20px;
-  border-bottom: 0.1px solid gray;
+  border-bottom: 0.1px solid #434242;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -330,29 +350,6 @@ header {
   z-index: 2;
 }
 
-.aside__activeTwo {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  min-height: 100vh;
-  transition: ease-out 0.5s;
-}
-
-.main__content {
-  display: flex;
-}
-
-.content {
-  flex: 1 1 auto;
-  padding-left: 50px;
-}
-
-@media (max-width: 1200px) {
-  .content {
-    padding: 0;
-  }
-}
 .video__block {
   display: flex;
   align-items: stretch;
@@ -367,21 +364,26 @@ header {
 .video video {
   width: 100%;
   border-radius: 15px;
-  height: 700px;
   min-width: 300px;
   box-shadow: 0px -5px 10px 0px rgba(154, 148, 148, 0.5);
 }
 
 .more__video-block-title {
-  border: 1px solid var(--border-color-main);
-  border-bottom: 0;
   border-radius: 5px 5px 0 0;
   padding: 10px;
   box-shadow: 0px -6px 10px 0px rgba(154, 148, 148, 0.5);
 }
 
+@media (max-width: 768px) {
+  .more__video-block-title {
+    border: 0.1px solid var(--border-color-main);
+    border-bottom: 0;
+  }
+  .more__video-block {
+    border: 0.1px solid var(--border-color-main);
+  }
+}
 .more__video-block {
-  border: 0.1px solid var(--border-color-main);
   border-top: none;
   border-radius: 0 0 5px 5px;
   padding: 10px;
@@ -391,6 +393,7 @@ header {
   overflow: auto;
   box-shadow: 0px 10px 10px 0px rgba(154, 148, 148, 0.5);
   flex: 1 1 auto;
+  max-height: 663px;
 }
 
 .more__video-item {
@@ -401,8 +404,7 @@ header {
 
 .video__item {
   box-shadow: 0px -2px 10px 0px rgba(154, 148, 148, 0.5);
-  width: 100%;
-  max-width: 100px;
+  width: 100px;
   height: 56px;
   border-radius: 5px;
   border: 1px solid var(--border-color-main);
@@ -433,19 +435,34 @@ header {
 
 @media (max-width: 1200px) {
   .video__block {
+    flex-direction: column;
+  }
+  .more__video-block {
+    flex-direction: initial;
+    justify-content: space-between;
     flex-wrap: wrap;
+  }
+  .video__text {
+    max-width: 218px;
   }
 }
 @media (max-width: 768px) {
   .video__item {
     max-width: 160px;
     height: 90px;
+    width: 100%;
+  }
+  .more__video-block {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .video__text {
+    max-width: none;
   }
   .video__text p {
     font-size: var(--fzTextMob);
   }
   .video video {
-    height: 300px;
     border-radius: 5px;
   }
   .video__block {
@@ -492,7 +509,7 @@ header {
   box-shadow: 0px -5px 10px 0px rgba(154, 148, 148, 0.5);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .docs__content {
     flex-direction: column;
   }

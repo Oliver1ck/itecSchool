@@ -1,14 +1,14 @@
 .main__nav {
   display: flex;
   margin-bottom: 30px;
-  padding-left: 300px;
 }
 
 .nav__list {
   display: flex;
-  gap: 15px;
+  gap: 5px;
   align-items: center;
   overflow: auto;
+  flex-wrap: wrap;
 }
 
 .list__item {
@@ -43,7 +43,6 @@
 
 @media (max-width:992px) {
   .nav__list{
-    gap: 5px;
     flex-wrap: wrap;
     &::-webkit-scrollbar {
       display: none;

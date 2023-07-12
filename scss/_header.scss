@@ -97,7 +97,7 @@ header{
 }
 
 .header__search {
-  flex: 0 1 350px;
+  flex: 0 1 450px;
   display: flex;
   align-items: center;
 
@@ -132,7 +132,7 @@ header{
 .header__logout {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   border-radius: 10px;
   border: 1px solid var(--border-color-second);
   padding: 5px;
